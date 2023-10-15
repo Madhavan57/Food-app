@@ -15,15 +15,17 @@
 
 .button-container {
   width: 100%;
-  padding: 0 10px;
+  /* padding: 0 10px; */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .imagechanger {
   font-size: 0.8rem;
-  padding: 25px;
+  /* padding: 25px; */
+  padding: 10px;
   border: 0.1px solid rgb(232, 229, 229);
   background-color: rgb(249, 238, 238);
 }
@@ -58,4 +60,9 @@
   border: 3px double #fff;
   color: white;
   cursor: pointer;
+}
+@media (min-width: 300px) and (max-width: 550px) {
+  .imagechanger {
+    font-size: 0.5rem;
+  }
 }

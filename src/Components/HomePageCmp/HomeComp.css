@@ -5,10 +5,12 @@
 .search-bar {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  /* margin-right: 20px; */
 }
 .search-bar > input {
   border: 1px solid grey;
+  width: 50%;
 }
 .parent-container {
   width: 100%;
@@ -19,12 +21,12 @@
   padding: 20px;
   align-items: center;
   justify-content: center;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .individual-food-items {
   width: 200px;
-  height: 300px;
+  height: 375px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -44,21 +46,47 @@
 }
 .total-item-cart-container {
   display: flex;
+  flex-direction: column;
   width: 100%;
   flex-wrap: wrap;
 }
 .left-cart-container {
-  width: 50%;
+  /* width: 50%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .right-cart-container {
-  width: 50%;
+  /* width: 50%; */
   background-color: rgb(120, 215, 120);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) and (min-width: 300px) {
+  .search-bar > input::placeholder {
+    font-size: 0.8rem;
+  }
+  .search-bar > input {
+    font-size: 0.8rem;
+  }
+  .search-bar {
+    margin-top: 50px;
+  }
+  .individual-food-items {
+    width: 135px;
+    height: 375px;
+    gap: 5px;
+  }
+  .parent-container {
+    padding: 10px;
+    gap: 10px;
+  }
+  .items-cart-container {
+    margin-top: 50px;
+  }
 }

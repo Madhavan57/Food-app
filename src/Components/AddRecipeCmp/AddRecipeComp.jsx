@@ -142,22 +142,24 @@ function SubmitRecipeComp() {
           <p>Ingredients</p>
           {ingredients.map((ingredient, index) => (
             <div className="ingredients-container" key={index}>
-              <input
-                type="text"
-                placeholder="Name of the ingredient"
-                name="name"
-                value={ingredient.name}
-                // onChange = {HandleChange}
-                onChange={(event) => handleIngredientChange(index, event)}
-              />
-              <input
-                type="text"
-                placeholder="Quantity(eg.1/2)"
-                name="quantity"
-                value={ingredient.quantity}
-                // onChange = {HandleChange}
-                onChange={(event) => handleIngredientChange(index, event)}
-              />
+              <div className="ingredient_input">
+                <input
+                  type="text"
+                  placeholder="Name of the ingredient"
+                  name="name"
+                  value={ingredient.name}
+                  // onChange = {HandleChange}
+                  onChange={(event) => handleIngredientChange(index, event)}
+                />
+                <input
+                  type="text"
+                  placeholder="Quantity(eg.1/2)"
+                  name="quantity"
+                  value={ingredient.quantity}
+                  // onChange = {HandleChange}
+                  onChange={(event) => handleIngredientChange(index, event)}
+                />
+              </div>
               <div className="cross-button">
                 <button
                   className="remove-btn"
